@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+    <test name="one">
+        <parameter name="browser" value="safari">
+            <classes>
+                <class name="HomePageTest">
+                    <methods>
+                        <include name="goToCBPageTest"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+    <test name="two">
+        <parameter name="browser" value="safari">
+            <classes>
+                <class name="CBWebsiteTest">
+                    <methods>
+                        <include name="goToCBWebsite"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+    <test name="three">
+        <parameter name="browser" value="safari">
+            <classes>
+                <class name="CBPageTest">
+                    <methods>
+                        <include name="goToRatesInLatestRates"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+    <test name="four">
+        <parameter name="browser" value="safari">
+            <classes>
+                <class name="CBEmailTest">
+                    <methods>
+                        <include name="goToCBMail"/>
+                    </methods>
+                </class>
+            </classes>
+        </parameter>
+    </test>
+</suite>
